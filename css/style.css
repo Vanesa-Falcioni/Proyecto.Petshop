@@ -1,0 +1,503 @@
+/* reseteo basico */
+* {
+  box-sizing: border-box;
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+/* parte superior-header */
+.top {
+  display: none;
+  background-color: #222222;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-size: 14px;
+}
+.idioma {
+  margin-right: 15px;
+}
+/* header */
+.principal {
+  background-color: #f0a83e;
+  padding: 2rem 3.87rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 166.38px;
+  height: auto;
+}
+/* Botón hamburguesa  */
+.hamb {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/*la clase principal del header es la referencia para el despliegue del menu hamburguesa */
+.principal {
+  position: relative;
+  z-index: 100;
+}
+
+/* debe estar oculto en celular */
+.menu {
+  display: none;
+}
+
+/* menu hamburguesa desplegado al hacer clic */
+.menu.open {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f0a83e;
+  padding: 1.5rem 0;
+  z-index: 9999 !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 4. Lista e íconos adentro del menú desplegado */
+.menu.open ul {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu.open ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: white;
+  font-size: 14px;
+}
+/* imagen superior de fondo  */
+.slide {
+  background-image: url("../img/fondo\ comedero.png"); /* imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.titulo1 {
+  padding: 0.8rem 1.5rem;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 400;
+}
+.slide h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+/* simulacion boton comedero */
+.slide span {
+  background-color: #f0a83e;
+  padding: 1rem;
+  color: white;
+}
+.productosdestacados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+/* titulo ppal productos destacados */
+.productosdestacados h1 {
+  color: #3c2313;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+/* subtitulo */
+.productosdestacados h4 {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+/* caja padre de las imagenes */
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 70%;
+}
+.cards img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+/* formulario de contacto */
+.datoscontactanos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1.5rem 1rem;
+  background-color: white;
+}
+.datoscontactanos h2 {
+  color: #3c2313;
+  font-weight: 700;
+}
+.frmcontacto {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  max-width: 340px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+/* campos del formulario */
+.campos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.campos input {
+  background-color: #3b1e10;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.campos label {
+  display: none;
+}
+/* botones del formulario */
+.botonesform {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.botonesform button {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* color para resetear */
+.botonesform button[type="reset"] {
+  background-color: #8c8c8c;
+}
+
+/* color para enviar */
+.botonesform button[type="submit"] {
+  background-color: #f0a83e;
+}
+/* suscripcion */
+.suscripcion {
+  background-color: #f0a83e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  width: 100%;
+}
+.susc_slogan {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+}
+.susc_slogan h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.susc_form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 320px;
+}
+.susc_form input {
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  outline: none;
+  text-align: center;
+}
+.susc_form button {
+  background-color: #3b2314;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.susc_form label {
+  display: none;
+}
+/* footer */
+footer {
+  background-color: #3b2314;
+  color: #ffffff;
+  width: 100%;
+}
+
+.contenidoppal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+}
+
+footer .logo img {
+  height: auto;
+  max-width: 180px;
+}
+
+footer .contacto {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+footer .contacto li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer .contacto img {
+  width: 45px;
+  height: 45px;
+}
+
+footer .contacto h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+footer .contacto p {
+  font-size: 0.9rem;
+  margin: 2px 0 0 0;
+  color: #cccccc;
+}
+
+.barrafinal {
+  background-color: black;
+  width: 100%;
+  padding: 0.8rem 0;
+  text-align: center;
+}
+
+.barrafinal p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  /* header */
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  .idioma {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .idioma span {
+    cursor: pointer;
+  }
+
+  /* menu desplazado */
+  .menu {
+    display: block;
+  }
+
+  .menu ul {
+    gap: 16px;
+    font-size: 15px;
+  }
+  /* Oculto la hamburguesa en escritorio */
+  .hamb {
+    display: none;
+  }
+  /* parte superior del main: slide */
+  .slide {
+    align-items: flex-end;
+    min-height: 380px;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
+    padding-right: 5%;
+    gap: 0.8rem;
+  }
+  /* productos destacados */
+  .productosdestacados {
+    padding: 4rem 2rem;
+    width: 100%;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+    width: 100%;
+    margin: 0%;
+  }
+  /*cada link <a> se haga mas grande para ocupar espacio */
+  .cards a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* aca la imagen ocupa el 100% del espacio  */
+  .cards img {
+    width: 100%;
+    max-width: 310px;
+    height: auto;
+    object-fit: contain;
+  }
+  /* formulario */
+  /* le doy mas ancho al formulario */
+  .frmcontacto {
+    max-width: 420px;
+  }
+  .datoscontactanos {
+    padding: 1rem;
+  }
+  .botonesform {
+    max-width: 280px;
+    margin: 15px auto 0 auto;
+  }
+  /* suscripcion */
+  .suscripcion {
+    background-color: #f0a83e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+  }
+
+  .susc_slogan {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #ffffff;
+  }
+  .susc_slogan h2 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  .susc_form {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-direction: row;
+  }
+  .susc_form input {
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    border: none;
+    width: 260px;
+    outline: none;
+  }
+  .susc_form button {
+    background-color: #3b2314;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  /* footer */
+  .contenidoppal {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+  }
+  /* Estilos de escritorio para el Footer */
+  .contenidoppal {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem 4rem;
+  }
+
+  footer .contacto {
+    max-width: none;
+    width: auto;
+  }
+
+  footer .logo img {
+    max-width: 220px;
+  }
+}
