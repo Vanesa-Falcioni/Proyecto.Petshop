@@ -121,7 +121,8 @@ body {
   font-size: 16px;
 }
 /* simulacion boton comedero */
-.slide span {
+.btn-comederos {
+  text-decoration: none;
   background-color: #f0a83e;
   padding: 1rem;
   color: white;
